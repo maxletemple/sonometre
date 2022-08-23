@@ -167,15 +167,15 @@ void loop()
 
 int matchDB(double vol)
 {
-	if (ampl < 150)
+	if (vol < 150)
 	{
 		return 38;
 	}
-	if (ampl < 500)
+	if (vol < 500)
 	{
-		return 0.062 * ampl + 39;
+		return 0.062 * vol + 39;
 	}
-	double temp = 0.02 * ampl + 60;
+	double temp = 0.02 * vol + 60;
 	if(temp > 100) temp = 100;
 	return temp;
 }

@@ -3,6 +3,7 @@ from flask import Flask, render_template, jsonify
 import requests
 
 app = Flask(__name__)
+ESP32url = 'http://192.168.0.113'
 
 @app.route("/")
 def index():
@@ -14,10 +15,10 @@ def alt_index():
 
 @app.route("/sound")
 def sound():
-    file = requests.get('http://192.168.0.113/sound')
+    file = requests.get(ESP32url + '/sound')
     return file.json()
 
 @app.route("/history")
 def history():
-    file = requests.get('http://192.168.0.113/history')
+    file = requests.get(ESP32url +'/history')
     return file.json()
