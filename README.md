@@ -1,5 +1,5 @@
 # Sonomètre
-Sonomètre connecté utilisé dans la salle des machine d'Eirlab à l'ENSEIRB-Matmeca.
+Ce projet est un sonomètre connecté utilisé dans la salle des machine d'Eirlab à l'ENSEIRB-Matmeca. Il permet d'avertir les utilisateurs en cas d'intensité sonore trop importante, via une LED RGB et un afficheur LCD.
 
 # Matériel
 
@@ -10,3 +10,7 @@ Sonomètre connecté utilisé dans la salle des machine d'Eirlab à l'ENSEIRB-Ma
 # Interface
 
 L'interface utilisateur affiche la valeur en décibels actuelle, ainsi qu'un historique des valeurs moyennes sur 5 secondes sur la minute passée.
+
+# Installation
+
+Installez Flask 
