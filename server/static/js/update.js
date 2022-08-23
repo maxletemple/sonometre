@@ -1,5 +1,5 @@
-var intervalId = window.setInterval(updateSound, 1000);
-var intervalId = window.setInterval(updateHistory, 1000);
+var intervalIdSound = window.setInterval(updateSound, 1000);
+var intervalIdHistory = window.setInterval(updateHistory, 5000);
 var historyData = [6, 6, 6, 6, 6]
 var ctx = document.getElementById("historyChart");
 var myLineChart = new Chart(ctx, {

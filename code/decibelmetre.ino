@@ -164,14 +164,14 @@ void loop()
 			;
 	}
 	ampl = maxVal - minVal;
-	Serial.println(ampl);
+	//Serial.println(ampl);
 }
 
 int matchDB(double vol)
 {
 	if (ampl < 150)
 	{
-		return -1;
+		return 38;
 	}
 	if (ampl < 500)
 	{
@@ -189,15 +189,16 @@ void taskCore0Code(void *pvParameters)
 	{
 		moyDB = matchDB(ampl);
 		dbValues[currentDBValue] = moyDB;
-
+		currentDBValue++;
 		lcd.clear();
-		if (moyDB == -1)
+		if (moyDB == 38)
 		{
 			lcd.print("Trop calme");
+			
 		}
-		else if (moyDB == -2)
+		else if (moyDB == 100)
 		{
-			lcd.print("Beaucoup trop fort");
+			lcd.print("Trop fort");
 		}
 		else
 		{
@@ -229,6 +230,7 @@ void taskCore0Code(void *pvParameters)
 				tempMoy += dbValues[i];
 			}
 			tempMoy /= 5;
+			currentDBValue = 0;
 			history[currentSound] = tempMoy;
 			historyBuffer = 0;
 			currentSound++;
