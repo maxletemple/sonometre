@@ -16,7 +16,7 @@ L'interface utilisateur affiche la valeur en décibels actuelle, ainsi qu'un his
 Le fichier à envoyer à l'ESP 32 est situé dans le dossier code. Remplissez le ssid et le mot de passe de votre réseau et envoyez le via l'IDE Arduino de votre choix. À l'initialisation, l'ESP 32 envoie sur le port Serial son adresse IP locale. Celle-ci est à reporter dans la variable `ESP32url` du fichier [`app.py`](server/app.py).
 L'installation du serveur se fait via uWSGI (plus d'infos [ici](https://flask.palletsprojects.com/en/2.2.x/deploying/uwsgi/)).
 
-# Callibrage du micro
+# Calibrage du micro
 
 Cette fonction permet de faire le lien entre l'amplitude mesurée (ampl). Pour plus de précisions, modifiez-là vous même. Ici j'ai opté pour une approche linéaire par morceaux, mais la vraie manière de calculer le volume en décibels est d'utiliser sa [définition logarithmique](https://fr.wikipedia.org/wiki/Niveau_(audio)), si vôtre micro est assez précis.
 ```C
@@ -35,3 +35,7 @@ int matchDB(double vol)
 	return temp;
 }
 ```
+# Remerciements
+
+- L'interface web utilise le thème bootstrap [SB Admin 2](https://startbootstrap.com/theme/sb-admin-2). Merci à [Start Bootstrap](https://startbootstrap.com) pour leur travail.
+- Merci à [Eirlab](https://www.eirlab.net) pour l'accueil et la mise à disposition du matériel.
