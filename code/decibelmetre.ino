@@ -23,8 +23,8 @@ int historyBuffer;
 
 TaskHandle_t taskCore0;
 
-const char *ssid = "eirlabIoT";
-const char *password = "eirlab2021enseirb!";
+const char *ssid = "ssid";
+const char *password = "password";
 
 int currentSound;
 const int historySize = 12;
