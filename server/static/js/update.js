@@ -1,6 +1,6 @@
 var intervalIdSound = window.setInterval(updateSound, 1000);
 var intervalIdHistory = window.setInterval(updateHistory, 5000);
-var historyData = [6, 6, 6, 6, 6]
+var historyData = [6, 6, 6, 6, 6];
 var ctx = document.getElementById("historyChart");
 var myLineChart = new Chart(ctx, {
   type: 'line',

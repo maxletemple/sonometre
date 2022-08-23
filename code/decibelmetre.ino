@@ -45,7 +45,6 @@ void handleSound()
 	char temp[100];
 	sprintf(temp, "{\"sound\" : %d}", matchDB(ampl));
 	server.send(200, "application/json", temp);
-	Serial.println(matchDB(ampl));
 }
 
 void handleHistory()
@@ -164,7 +163,6 @@ void loop()
 			;
 	}
 	ampl = maxVal - minVal;
-	//Serial.println(ampl);
 }
 
 int matchDB(double vol)
