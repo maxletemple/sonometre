@@ -18,7 +18,7 @@ L'installation du serveur se fait via uWSGI (plus d'infos [ici](https://flask.pa
 
 # Calibrage du micro
 
-Cette fonction permet de faire le lien entre l'amplitude mesurée (ampl). Pour plus de précisions, modifiez-là vous même. Ici j'ai opté pour une approche linéaire par morceaux, mais la vraie manière de calculer le volume en décibels est d'utiliser sa [définition logarithmique](https://fr.wikipedia.org/wiki/Niveau_(audio)), si vôtre micro est assez précis.
+Cette fonction permet de faire le lien entre l'amplitude mesurée (ampl). Pour plus de précisions, modifiez-la en testant avec vôtre micro. Ici j'ai opté pour une approche linéaire par morceaux, mais la vraie manière de calculer le volume en décibels est d'utiliser sa [définition logarithmique](https://fr.wikipedia.org/wiki/Niveau_(audio)), si vôtre micro est assez précis.
 ```C
 int matchDB(double vol)
 {
