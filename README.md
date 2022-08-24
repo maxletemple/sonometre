@@ -1,5 +1,6 @@
 # Sonomètre
 Ce projet est un sonomètre connecté utilisé dans la salle des machine d'Eirlab à l'ENSEIRB-Matmeca (33). Il permet d'avertir les utilisateurs en cas d'intensité sonore trop importante, via une LED RGB et un afficheur LCD.
+L'ESP32 lance un serveur répondant aux URI `/sound` et `/history`. Ceux-ci sont utilisés par le serveur web lancé sur une autre machine, qui fait une requête toutes les secondes pour mettre à jour la page web.
 
 # Matériel
 
@@ -35,6 +36,8 @@ int matchDB(double vol)
 	return temp;
 }
 ```
+# 
+
 # Remerciements
 
 - L'interface web utilise le thème bootstrap [SB Admin 2](https://startbootstrap.com/theme/sb-admin-2). Merci à [Start Bootstrap](https://startbootstrap.com) pour leur travail.
